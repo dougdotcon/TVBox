@@ -1,6 +1,7 @@
+import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Dashboard from './pages/Dashboard';
-import TVBoxDetails from './pages/TVBoxDetails';
+import Dashboard from './pages/Dashboard.jsx';
+import TVBoxDetails from './pages/TVBoxDetails.jsx';
 
 export default function App() {
   return (
