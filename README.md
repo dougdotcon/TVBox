@@ -1,163 +1,104 @@
-# TVBox Cluster Monitoring
+# TVBoxClusterMonitor
 
-##  Reaproveitar, Orquestrar, Escalar
+**Reapurpose • Orchestrate • Scale**
 
-Projeto de monitoramento de clusters de TV Boxes reutilizadas, iniciado como iniciação científica e evoluindo para TFG. Visando extrair máximo valor de hardware descartado através de boas práticas de infraestrutura.
+TVBoxClusterMonitor is a comprehensive monitoring solution designed for clusters of repurposed Android TV boxes. Initiated as a research project and evolved into a full-stack system, it aims to extract maximum value from discarded hardware by implementing modern infrastructure best practices. The solution provides real-time visibility, automated discovery, and a foundation for scalable distributed computing using low-cost edge devices.
 
-### Screenshots
+## Key Features
 
-#### Dashboard Principal
-![Dashboard Principal](frontend/screenshots/dashboard.png)
+- **Real-time Resource Monitoring**: Live tracking of CPU usage, memory consumption, and system health.
+- **Interactive Dashboard**: Clean, responsive UI with dark mode, featuring detailed charts and metrics visualization.
+- **Automated Discovery**: Automatic detection of TV Boxes on the network.
+- **Detailed Insights**: Modal views for individual device status, resource history, and performance metrics.
+- **Scalable Architecture**: Built with Node.js, React, and Docker for easy deployment and future expansion.
 
-#### Modal de Detalhes de TVBox
-![Modal TVBox](frontend/screenshots/modal-tvbox.png)
+## Dashboard Overview
 
-###  Recursos Atuais
-- Monitoramento em tempo real de recursos (CPU, memória)
-- Visualização de métricas em gráficos interativos
-- Detecção automática de TV Boxes na rede
-- Interface responsiva com tema escuro
+<p align="center">
+  <img src="frontend/screenshots/dashboard.png" alt="Main Dashboard" width="45%" style="display:inline-block; margin-right:10px;"/>
+  <img src="frontend/screenshots/modal-tvbox.png" alt="TVBox Details Modal" width="45%" style="display:inline-block;"/>
+</p>
 
-###  Futuras Melhorias
-- Implementação de Kubernetes para orquestração
-- Arquitetura de microserviços
-- Escalabilidade horizontal dinâmica
-- Métricas detalhadas de rede e armazenamento
+## Technology Stack
 
-###  Tecnologias
-**Backend:** Node.js, Express, Socket.IO  
-**Frontend:** React, Vite, Recharts, TailwindCSS  
-**Infra:** Docker, systemd
+- **Backend**: Node.js, Express, Socket.IO
+- **Frontend**: React, Vite, Recharts, TailwindCSS
+- **Infrastructure**: Docker, systemd
 
-## Aplicabilidades e Potencial de Inovação
+## Roadmap & Future Improvements
 
-O **TVBox Cluster Monitoring** representa uma solução inovadora para o reaproveitamento de hardware descartado, transformando TV Boxes obsoletas em recursos computacionais úteis através de monitoramento inteligente e orquestração eficiente.
+- **Advanced Orchestration**: Integration with Kubernetes for container management.
+- **Microservices Architecture**: Decoupling services for better scalability and resilience.
+- **Dynamic Horizontal Scaling**: Automated scaling based on workload metrics.
+- **Enhanced Observability**: Detailed network I/O, disk I/O, and storage metrics.
+- **Distributed Edge Computing**: Framework for deploying and managing edge workloads.
 
-### Aplicabilidades Principais
+## Use Cases and Innovation Potential
 
-#### 1. Computação Distribuída de Baixo Custo
-- **Processamento paralelo** para tarefas que não exigem alta performance individual
-- **Cluster computing** para processamento de dados em lote
-- **Edge computing** descentralizado para IoT e aplicações locais
-- **Backup distribuído** e redundância de dados
+The TVBoxClusterMonitor transforms obsolete hardware into a viable computing cluster, ideal for various innovative applications:
 
-#### 2. Laboratórios de Pesquisa e Educação
-- **Ambientes de aprendizado** para conceitos de sistemas distribuídos
-- **Testbed** para algoritmos de balanceamento e orquestração
-- **Simulação de infraestruturas** complexas com recursos limitados
-- **Prototipagem** de soluções de IoT e edge computing
+### 1. Low-Cost Distributed Computing
+- **Parallel processing** for non-latency-sensitive tasks (e.g., batch data processing).
+- **Cluster computing** for simulations and large-scale computations.
+- **Decentralized Edge Computing** for IoT gateways and local data processing.
+- **Distributed backup** and data redundancy systems.
 
-#### 3. Infraestrutura para Microserviços
-- **Containerização** de aplicações leves
-- **Service mesh** para comunicação entre serviços
-- **API Gateway** distribuído
-- **Cache distribuído** e session storage
+### 2. Research and Education
+- **Learning Environments** for distributed systems concepts and cluster management.
+- **Testbeds** for algorithm development (load balancing, container orchestration).
+- **Infrastructure Simulation** for complex scenarios with resource constraints.
 
-#### 4. Monitoramento e Observabilidade
-- **Métricas em tempo real** de infraestrutura
-- **Alertas proativos** baseados em thresholds
-- **Análise de performance** histórica
-- **Dashboard centralizado** para múltiplos recursos
+### 3. Microservices Infrastructure
+- **Lightweight Containerization** for hosting microservices.
+- **Distributed API Gateways** and load balancers.
+- **Cache Clusters** (e.g., Redis) and distributed session storage.
 
-### Resultados Esperados
+### 4. Monitoring and Observability
+- **Real-time Metrics** collection and aggregation.
+- **Proactive Alerts** based on configurable thresholds.
+- **Historical Performance Analysis** for trend identification.
 
-#### Benefícios Imediatos
-- **Redução de custos** em até 80% comparado a hardware novo
-- **Sustentabilidade ambiental** através do reaproveitamento
-- **Visibilidade completa** dos recursos computacionais
-- **Escalabilidade horizontal** dinâmica
-- **Alta disponibilidade** através de redundância
+## Expected Results & Metrics
 
-#### Métricas de Performance
-```yaml
-Monitoramento:
-  - Latência de coleta: < 250ms
-  - Frequência de atualização: 3s
-  - Uptime esperado: > 99.5%
-  - Capacidade de dispositivos: 50+ TVBoxes
+### Immediate Benefits
+- **Cost Reduction**: Up to 80% savings compared to traditional hardware.
+- **Sustainability**: Promotes hardware reuse and reduces e-waste.
+- **Full Visibility**: Centralized dashboard for all cluster resources.
+- **Dynamic Scalability**: Add or remove nodes on demand.
+- **High Availability**: Redundancy across multiple devices.
 
-Recursos Típicos por TVBox:
-  - CPU: 1-4 cores ARM
+### Performance Targets
+yaml
+Monitoring:
+  - Collection Latency: < 250ms
+  - Update Frequency: 3s
+  - Expected Uptime: > 99.5%
+  - Device Capacity: 50+ TVBoxes
+
+Typical TVBox Specs:
+  - CPU: 1-4 ARM cores
   - RAM: 1-4GB
   - Storage: 8-32GB
-  - Rede: 100Mbps-1Gbps
-```
+  - Network: 100Mbps-1Gbps
 
-#### ROI (Return on Investment)
-- **Custo por node**: $10-30 (vs $200-500 hardware novo)
-- **Payback period**: 2-6 meses
-- **Economia operacional**: 60-85% em energia e manutenção
 
-### Soluções Derivadas
+## Getting Started
 
-#### 1. Plataforma de Edge Computing
-**Aplicações:**
-- Smart cities com processamento local
-- Agricultura de precisão
-- Monitoramento industrial
-- Sistemas de segurança distribuídos
+To get started with TVBoxClusterMonitor, refer to the specific setup instructions in the `docker-compose.yml` and environment configuration files located in the project repository.
 
-#### 2. CDN (Content Delivery Network) Comunitária
-**Benefícios:**
-- Redução de latência para conteúdo local
-- Economia de banda em provedores
-- Resistência a falhas regionais
+### Prerequisites
+- Docker & Docker Compose
+- Node.js (for development environment)
+- TV Boxes with SSH access enabled
 
-#### 3. Sistema de Backup Distribuído
-**Características:**
-- Redundância geográfica automática
-- Criptografia end-to-end
-- Recuperação automática de falhas
-- Versionamento incremental
+## Contributing
 
-### Casos de Uso Específicos
+Contributions are welcome! Please read our `CONTRIBUTING.md` for details on our code of conduct and the process for submitting pull requests.
 
-#### Smart Campus Universitário
-- **150+ TVBoxes** distribuídas por laboratórios
-- **Processamento** de dados de sensores ambientais
-- **Analytics** de ocupação e uso de espaços
-- **Economia estimada**: R$ 200.000/ano vs solução comercial
+## License
 
-#### Cooperativa de Internet Rural
-- **50+ nós** em comunidades remotas
-- **Cache local** de conteúdo frequente
-- **Redundância** entre comunidades vizinhas
-- **Impacto**: Redução de 70% no uso de banda externa
+This project is licensed under the MIT License - see the `LICENSE` file for details.
 
-#### Startups de IoT
-- **Prototipagem rápida** de soluções
-- **Testes de carga** distribuídos
-- **MVP** com investimento mínimo
-- **Time-to-market**: 60% mais rápido
+---
 
-### Sustentabilidade e Impacto Social
-
-#### Impacto Ambiental
-- **Redução de e-waste**: Cada TVBox reaproveitada evita ~2kg de lixo eletrônico
-- **Economia energética**: Consumo 5-10x menor que servidores tradicionais
-- **Pegada de carbono**: Redução de 80% vs hardware novo
-
-#### Impacto Social
-- **Inclusão digital**: Tecnologia acessível para comunidades
-- **Educação**: Laboratórios de baixo custo para escolas
-- **Empreendedorismo**: Oportunidades para pequenos provedores
-
-###  Instalação
-```bash
-./setup-api.sh
-```
-
-### 📂 Estrutura do Projeto
-```
-backend/      - Backend com endpoints REST e WebSocket
-frontend/     - Interface web React
-logs/         - Arquivos de log da aplicação
-```
-
-###  Dependências
-- Node.js v18+
-- npm
-- Docker (recomendado)
-
-###  Licença
-MIT License
+*TVBoxClusterMonitor - Transforming discarded hardware into powerful computing resources.*
